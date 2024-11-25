@@ -122,7 +122,7 @@ class Coupang:
         for payload in payloads:
             self.fetch(payload=payload)
 
-    def fetch(self, payload: list[dict]) -> None:
+    def fetch(self, payload) -> None:
         now_page: str = payload["page"]
         print(f"\n[INFO] Start crawling page {now_page} ...\n")
         attempt: int = 0
