@@ -242,7 +242,7 @@ class Coupang:
         command: str = "clear"
         if os.name in ("nt", "dos"):
             command = "cls"
-        os.system(command=command)
+        os.system(command)
 
     def input_review_url(self) -> str:
         while True:
@@ -276,7 +276,7 @@ class SaveData:
         if not os.path.exists(self.dir_name):
             os.makedirs(self.dir_name)
 
-    def save(self, datas: dict[str, str | int]) -> None:
+    def save(self, datas) -> None:
         file_name: str = os.path.join(self.dir_name, datas["title"] + ".xlsx")
         self.ws[f"A{self.row}"] = datas["user_name"]
         self.ws[f"B{self.row}"] = datas["review_date"]
