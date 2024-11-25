@@ -54,7 +54,7 @@ class Coupang:
     def __init__(self) -> None:
         self.base_review_url: str = "https://www.coupang.com/vp/product/reviews"
         self.sd = SaveData()
-        self.retries = 10
+        self.retries = 30
         self.delay = 0.5
         self.headers = {
             "accept": "*/*",
